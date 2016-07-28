@@ -1,4 +1,6 @@
 from tkinter import*
+import tkinter.messagebox as box
+
 root = Tk()
 root.title('Footie en pañales')
 root.iconbitmap(default='C:\penguin.ico')
@@ -59,6 +61,9 @@ def search_output(pattern,if_ignore_case,content_text,search_toplevel,search_ent
 			matches_found+=1
 			start_pos=end_pos
 		content_text.tag_config('match',foreground='red',background='yellow')
+	else:
+		box.showwarning('No terms?','No terms to search.(Search Inbox Empty!)')
+	
 	search_toplevel.title('{} matches found'.format(matches_found))
 	
 	
