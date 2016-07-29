@@ -141,6 +141,9 @@ content_text.bind('<Control-Y>',redo)
 #binding select all
 content_text.bind('<Control-A>',select_all)
 content_text.bind('<Control-a>',select_all)
+#binding find
+content_text.bind('<Control-f>',find_text)
+content_text.bind('<Control-F>',find_text)
 
 scroll_bar=Scrollbar(content_text)
 content_text.configure(yscrollcommand=scroll_bar.set)#esta y la sig linea son las que conectan el texto con la barra y viceversa
